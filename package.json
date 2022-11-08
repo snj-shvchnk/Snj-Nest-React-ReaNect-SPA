@@ -1,0 +1,19 @@
+{
+    "name": "snj-container-app",
+    "version": "1.0.0",
+    "description": "Nest.JS / React.JS Application",
+    "scripts": {
+        "start": "run-s tab:frontend tab:backend open:page",
+        "open:page": "open 'http://localhost:3000/'",
+        "tab:frontend": "ttab -t 'React.JS' && cd ./snj-client-app && npm start",
+        "tab:backend": "ttab -t 'Nest.JS' && cd ./snj-server-app && npm run start:dev"
+    },
+    "keywords": [],
+    "author": "Senja Shevchenko <senjshevchenko@gmail.com>",
+    "license": "ISC",
+    "devDependencies": {
+        "concurrently": "^7.5.0",
+        "npm-run-all": "^4.1.3",
+        "ttab": "^0.6.1"
+    }
+}

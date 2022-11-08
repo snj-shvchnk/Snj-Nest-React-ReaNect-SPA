@@ -1,0 +1,175 @@
+.App {
+  text-align: center;
+}
+
+.logos-holder {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.App-logo {
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .React-logo {
+    animation: App-logo-1-opa infinite 16s linear;
+  }
+  .Nest-logo {
+   animation: App-logo-2-opa infinite 13s linear;
+  }
+  .App-logo-1 {
+    animation: App-logo-spin infinite 30s linear;
+  }
+  .App-logo-2 {
+    animation: App-logo-spin infinite 30s linear;
+  }
+  .magic-words {
+    animation: App-magic-3-opa infinite 4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+}
+
+.App-header {
+  /* min-height: 100vh;
+  display: block;
+  justify-content: center;
+  font-size: calc(10px + 3vmin);
+  color: white;
+  background: linear-gradient(0deg, rgba(0 0 0 / 0.5) 20%, rgba(0 0 0 / 0.4) 65%, transparent 100%), rgba(0 0 0 / 0.3); */
+
+  position: fixed;
+  height: 100vh;
+  display: block;
+  font-size: calc(9px + 2vmin);
+  color: white;
+  background: linear-gradient(0deg, rgba(0 0 0 / 0.5) 20%, rgba(0 0 0 / 0.4) 65%, transparent 100%), rgba(0 0 0 / 0.3);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#particles-js{
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  background-image: url(../public/mountains.png);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  position: fixed;
+  /* z-index: -1; */
+  z-index: 1;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+}
+
+.App-link {
+  color: #61dafb;
+  margin-top: 35px;
+}
+
+.hidden-trigger {
+  width: 60px;
+  background: rgb(90, 31, 157);
+  height: 60px;
+  line-height: 60px;
+  font-size: 40px;
+  color: white;
+  opacity: 0.1;
+  border-radius: 50%;
+  bottom: 9vh;
+  position: fixed;
+  border: 20px solid #000;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: 1s ease;
+}
+
+.hidden-trigger:hover {
+  opacity: 0.6;
+  transition: 4s ease;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes App-logo-1-opa {
+  100% {
+    opacity: 1;
+    transform: scale3d(0.95, 1, 1);
+  }
+  80% {
+    opacity: 0.78;
+    transform: scale3d(1, 0.95, 1);
+  }
+  50% {
+    opacity: 0.97;
+    transform: scale3d(1, 1, 1);
+  }
+  20% {
+    opacity: 0.80;
+    transform: scale3d(1, 1.05, 1);
+  }
+  0% {
+    opacity: 1;
+    transform: scale3d(0.95, 1, 1);
+  }
+}
+
+
+@keyframes App-logo-2-opa {
+  0% {
+    opacity: 1;
+    transform: scale3d(1.05, 1, 1);
+  }
+  30% {
+    opacity: 0.78;
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    opacity: 0.97;
+    transform: scale3d(1, 1.05, 1);
+  }
+  70% {
+    opacity: 0.80;
+    transform: scale3d(0.95, 1, 1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale3d(1.05, 1, 1);
+  }
+}
+
+@keyframes App-magic-3-opa {
+  0% {
+    opacity: 1;
+    transform: scale3d(1.02, 1, 1);
+  }
+  30% {
+    opacity: 0.84;
+    transform: scale3d(1, 0.97, 1);
+  }
+  50% {
+    opacity: 0.97;
+    transform: scale3d(1.02, 0.99, 1);
+  }
+  70% {
+    opacity: 0.86;
+    transform: scale3d(1.01, 0.97, 1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale3d(1.02, 1, 1);
+  }
+}
