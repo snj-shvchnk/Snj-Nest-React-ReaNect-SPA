@@ -3,10 +3,12 @@
     "version": "1.0.0",
     "description": "Nest.JS / React.JS Application",
     "scripts": {
-        "start": "run-s tab:frontend tab:backend open:page",
+        "start": "run-s tab:frontend tab:backend tab:database open:page",
         "open:page": "open 'http://localhost:3000/'",
-        "tab:frontend": "ttab -t 'React.JS' && cd ./snj-client-app && npm start",
-        "tab:backend": "ttab -t 'Nest.JS' && cd ./snj-server-app && npm run start:dev"
+        "tab:frontend": "ttab -t 'React.JS' & cd ./snj-client-app & npm start",
+        "tab:backend": "ttab -t 'Nest.JS' & cd ./snj-server-app & npm run start:dev",
+        "tab:database": "ttab -t 'Mongoose.DB' & cd ./snj-mongoose & docker-compose.yml",
+        "install": "cd  ./snj-client-app/ && npm install && cd ../snj-server-app && npm install && cd ../snj-mongoose && npm install"
     },
     "keywords": [],
     "author": "Senja Shevchenko <senjshevchenko@gmail.com>",

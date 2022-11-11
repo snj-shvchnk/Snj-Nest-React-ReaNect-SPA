@@ -2,6 +2,7 @@ import React from 'react';
 import ServiceWorker from './ServiceWorker';
 import 'particles.js';
 import logo from './logo.svg';
+import logo2 from './logo2.svg';
 import './App.css';
 
 class App extends React.Component {
@@ -43,10 +44,10 @@ class App extends React.Component {
           
           <div className="logos-holder mb20">
             <div className="React-logo">
-              <img src={logo} className="App-logo App-logo-2" alt="logo-react" />
+              <img src={logo} className="App-logo App-logo-1" alt="logo-react" />
             </div>
             <div className="Nest-logo">
-              <img src={logo} className="App-logo App-logo-2" alt="logo-nest" />
+              <img src={logo} className="App-logo App-logo-1" alt="logo-react" />
             </div>
           </div>
   
@@ -56,6 +57,10 @@ class App extends React.Component {
             <small className="op05 magic-words txt-ltl mv20 lts12">...if you still understand, oh yeah...</small>
           </div>
         </header>
+
+        <div class="cat-container">
+          <img src={logo2} alt="Logo Nest" />
+        </div>
         
         <div id="particles-js"></div>
 
@@ -64,6 +69,7 @@ class App extends React.Component {
             : <div className="txt-ltl op05 hidden-trigger" onClick={(e) => { this.onSClick(e); }}>S</div>
         }
 
+        <div className="overlay-wrapper"></div>
       </div>
     );
   }
